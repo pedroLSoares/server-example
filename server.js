@@ -14,6 +14,6 @@ app.get("/error", function (req, res) {
 });
 
 app.on("error", (err) => console.log(err));
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, () => {
+  console.log(`Server running at ${port}/`);
 });
