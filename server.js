@@ -11,6 +11,7 @@ app.get("/", function (req, res) {
 app.get("/error", function (req, res) {
   res.statusCode = 500;
   app.emit("error", new Error("teste"));
+  res.send("error");
 });
 
 app.on("error", (err) => console.log(err));
